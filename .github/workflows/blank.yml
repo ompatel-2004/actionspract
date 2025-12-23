@@ -1,0 +1,13 @@
+name: SimpleDemo
+
+on: 
+  push: 
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu_latest
+    steps: 
+      - run: echo "Running test"
+
