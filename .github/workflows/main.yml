@@ -1,24 +1,26 @@
-name: SimpleDemo
+name: simpleDemo
 
-on: 
-  push: 
+on:
+  push:
     branches: ["main"]
   pull_request:
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - uses: actions/checkout@v5
-      - name: Test1 Run Test
-        run: echo "Running test"
-      - name: Test2 Test code
-        run: echo "Testing code"
-  deploy:                            
+      - name: Test1 
+        run: echo "Running Test"
+      - name: Test2
+        run: echo "Re-Testing"
+
+  deploy:
     needs: test
     runs-on: ubuntu-latest
-    steps:
-      - name: Deploy App
-        run: echo "Deploying app"
-      - name: Monitor App
-        run: echo "Monitoring the app"
+    steps: 
+      - name: Montinor App
+        run: echo "Monitoring App"
+      - name: Tracking App
+        run: echo "Tracking Unknown activities"
+    
